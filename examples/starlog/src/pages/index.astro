@@ -15,9 +15,9 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 		  {
 		    posts.map((post) => (
 		      <li class="post">
-		        <a href={`/releases/${post.id}`}>
+		
 		          <div class="version_wrapper">
-		            <div class="version_info">
+		            <div class="version_info"> <a href={`/releases/${post.id}`}>
 		              <div class="version_number">{post.data.versionNumber}</div>
 		              <FormattedDate class="date" date={post.data.date} />
 		            </div>
@@ -27,9 +27,8 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 		                alt={post.data.image?.alt ?? post.data.title}
 		              />
 		              <h2>{post.data.title}</h2>
-		            </div>
+		            </div> 		        </a>
 		          </div>
-		        </a>
 		      </li>
 		    ))
 		  }
