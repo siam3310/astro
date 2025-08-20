@@ -23,7 +23,11 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 
 							</div> </a>
 						</div>
-
+						<div class="content">
+							{render(post).then(({ Content }) => (
+								<Content />
+							))}
+						</div>
 					</li>
 				))
 			}
