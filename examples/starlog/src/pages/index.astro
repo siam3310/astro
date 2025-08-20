@@ -20,14 +20,10 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 								<a href={`/releases/${post.id}`}>
 									<div class="version_number">{post.data.versionNumber}</div>
 									<FormattedDate class="date" date={post.data.date} />
-								</a>
-							</div>
+
+							</div> </a>
 						</div>
-						<div class="content">
-							{render(post).then(({ Content }) => (
-								<Content />
-							))}
-						</div>
+
 					</li>
 				))
 			}
