@@ -11,25 +11,25 @@ posts.sort((a, b) => +b.data.date - +a.data.date);
 	<main>
 		<h1 class="page_title">Changelog</h1>
 		<hr />
-<ul class="posts" transition:name="post">
-  {
-    posts.map((post) => (
-      <li class="post">
-        <div class="version_wrapper">
-          <div class="version_info">
-            <a href={`/releases/${post.id}`}>
-              <div class="version_number">{post.data.versionNumber}</div>
-              <FormattedDate class="date" date={post.data.date} />
-          </div>
-        </div> 
-        <div class="content">
-          <img src={post.data.image} alt={post.data.title} />
-          <h2>{post.data.title}</h2>
-        </div>
-        </a>
-      </li>
-    ))
-  }
-</ul>
+		<ul class="posts" transition:name="post">
+		  {
+		    posts.map((post) => (
+		      <li class="post">
+		        <a href={`/releases/${post.id}`}>
+		          <div class="version_wrapper">
+		            <div class="version_info">
+		              <div class="version_number">{post.data.versionNumber}</div>
+		              <FormattedDate class="date" date={post.data.date} />
+		            </div>
+		            <div class="content">
+		              <img src={post.data.image} alt={post.data.title} />
+		              <h2>{post.data.title}</h2>
+		            </div>
+		          </div>
+		        </a>
+		      </li>
+		    ))
+		  }
+		</ul>
 	</main>
 </Layout>
